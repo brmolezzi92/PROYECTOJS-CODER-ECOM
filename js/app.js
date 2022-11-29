@@ -1,62 +1,62 @@
 // PRODUCTOS
 const productos = [
     {
-        id:"Anillo 01",
+        id:"Anillo",
         titulo:"Anillo Plata",
         img:"./img/anillos/anillo01.jpg",
         categoria: {
             nombre:"Anillos",
-            id: "Anillos"
+            id: "anillo"
         },
         precio:1500
     },
     {
-        id:"Anillo 02",
+        id:"Anillo",
         titulo:"Anillo Oro",
         img:"./img/anillos/anillo01.jpg",
         categoria: {
             nombre:"Anillos",
-            id: "Anillos"
+            id: "anillo"
         },
         precio:1500
     },
     {
-        id:"Anillo 03",
+        id:"Anillo",
         titulo:"Anillo Plata y Oro",
         img:"./img/anillos/anillo01.jpg",
         categoria: {
             nombre:"Anillos",
-            id: "Anillos"
+            id: "anillo"
         },
         precio:1500
     },
     {
-        id:"Reloj 01",
+        id:"Reloj",
         titulo:"Reloj Casio",
         img:"./img/anillos/anillo01.jpg",
         categoria: {
             nombre:"Relojes",
-            id: "Reloj"
+            id: "reloj"
         },
         precio:1500
     },
     {
-        id:"Reloj 02",
+        id:"Reloj",
         titulo:"Reloj Casio Mujer",
         img:"./img/anillos/anillo01.jpg",
         categoria: {
             nombre:"Relojes",
-            id: "Reloj"
+            id: "reloj"
         },
         precio:1500
     },
     {
-        id:"Cadena 01",
+        id:"Cadena",
         titulo:"Cadena de Plata",
         img:"./img/anillos/anillo01.jpg",
         categoria: {
             nombre:"Cadenas",
-            id: "Cadena"
+            id: "cadena"
         },
         precio:1500
     },
@@ -104,6 +104,7 @@ botonesCategorias.forEach(boton => {
         if (e.currentTarget.id != "todos") {
             const productoCategoria = productos.find(producto => producto.categoria.id === e.currentTarget.id);
             tituloPrincipal.innerText = productoCategoria.categoria.nombre;
+            //EL ERROR ESTA ACA-----------------
             const productosBoton = productos.filter(producto => producto.categoria.id === e.currentTarget.id);
             cargarProductos(productosBoton);
         } else {
